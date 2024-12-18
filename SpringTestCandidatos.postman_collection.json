@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "81a55fca-c231-4f6b-9794-b22372667ec6",
+		"name": "SpringTestCandidatos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5473535"
+	},
+	"item": [
+		{
+			"name": "auth/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\":\"luisx\",\r\n\"password\":\"123456\",\r\n\"firstname\":\"xiu\",\r\n\"lastname\":\"linda\",\r\n\"country\":\"peru\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8092/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\":\"rafaella\",\r\n\"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8092/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "candidato/lista",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWZhZWxsYSIsImlhdCI6MTcxNzI0OTU3MywiZXhwIjoxNzE3MjUxMDEzfQ.QeD3RZSO-7m4CBDKxtRGO1b3OvJsYl073zx2IIrlbhI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8092/api/v1/candidato/lista",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"v1",
+						"candidato",
+						"lista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "candidato/save",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWZhZWxsYSIsImlhdCI6MTcxNzIxMTY2NSwiZXhwIjoxNzE3MjEzMTA1fQ.1jI7hYARYb_wOzNyvEVrwrdFYc9eGV1KTqH4U98VnUY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"linda\",\r\n\"email\":\"linda@ss.com\",\r\n\"gender\":\"H\",\r\n\"salary\":5200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8092/api/v1/candidato/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"v1",
+						"candidato",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "candidato/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWZhZWxsYSIsImlhdCI6MTcxNzIxMTY2NSwiZXhwIjoxNzE3MjEzMTA1fQ.1jI7hYARYb_wOzNyvEVrwrdFYc9eGV1KTqH4U98VnUY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\":4,\r\n\"name\":\"luis Escalante\",\r\n\"email\":\"luis@ss.com\",\r\n\"gender\":\"H\",\r\n\"salary\":3200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8092/api/v1/candidato/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"v1",
+						"candidato",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "candidato/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWZhZWxsYSIsImlhdCI6MTcxNzIxMTY2NSwiZXhwIjoxNzE3MjEzMTA1fQ.1jI7hYARYb_wOzNyvEVrwrdFYc9eGV1KTqH4U98VnUY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8092/api/v1/candidato/delete/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"v1",
+						"candidato",
+						"delete",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
